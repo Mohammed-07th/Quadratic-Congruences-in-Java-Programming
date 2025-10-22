@@ -1,0 +1,15 @@
+PROJECT SUMMARY:
+This project implements the solution for quadratic congruences (ax^2 + bx + c ≡ 0 mod p) in Java. The program takes coefficients a, b, c, and a modulus p (which must be an odd prime) as user input[cite: 14, 92, 104, 125]. It validates the input and calculates the solutions, if they exist, using concepts like the discriminant, Fermat's Little Theorem, and the modular inverse[cite: 126, 127, 130].
+
+KEY ALGORITHMS/METHODS:
+1.  **main(String[] args)**: Takes user input for coefficients (a, b, c) and the odd prime (p), then prints the solution if it exists[cite: 14, 125].
+2.  **isOddPrime(int n) / isPrime(int n)**: Checks if the input modulus 'p' is an odd prime number [cite: 15, 16, 39-50].
+3.  **fermat(int base, int power)**: Implements Fermat's Little Theorem to check for a quadratic residue [cite: 17, 18, 30-38, 127].
+4.  **mod(int n)**: Calculates the modulo 'n mod p', handling negative results to ensure a positive value [cite: 19, 20, 51-58].
+5.  **modInverse(int a, int prime)**: Calculates the modular inverse for the solution formula [cite: 23, 24, 59-64, 130].
+6.  **countAlpha(int d)**: Calculates the value 'alpha' such that $\alpha^2 \equiv d \pmod{p}$, where $d$ is the discriminant [cite: 21, 22, 65-72, 129].
+7.  **isPerfectSquare(double x)**: Helper method to check if a value is a perfect square [cite: 25, 26, 73-75].
+8.  **solution(int d)**: The core method that uses the helping functions to calculate the two final solutions (solution1 and solution2) and prints them [cite: 27, 28, 76-86, 130].
+
+TERMINATION:
+The program continues running until the user enters a negative number, at which point it prints "GoodBye!" and exits[cite: 132].
